@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <title>About Me</title>
+</head>
+
+<body>
+  <script src="app.js"></script>
+  <h1>Hello
+    <script>document.write(prompt("What is your name?"));</script>
+  </h1>
+  <h1> Who is Andrew? I don't know!</h1>
+  <ul>
+    <li>Technology consutant for 20+ years</li>
+    <li>BSc in Computer Science</li>
+    <li>MBA</li>
+    <li>Currently working on a start-up</li>
+  </ul>
+  <script>
+    let question = "Does Andrew eat Shredded Wheat?";
+    giveResponse(question, askQuestion(question), false);
+
+    question = "Is Andrew's favourite colour blue?";
+    giveResponse(question, askQuestion(question), true);
+
+    question = "Does Andrew have a cat?";
+    giveResponse(question, askQuestion(question), false);
+
+    question = "Does Andrew paly guitar?";
+    giveResponse(question, askQuestion(question), true);
+
+    question = "Is Andrew learning full stack development?";
+    giveResponse(question, askQuestion(question), true);  
+  </script>
+</body>
+
+</html>
