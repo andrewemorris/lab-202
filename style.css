@@ -6,10 +6,13 @@ h1 {
 li {
   color: whitesmoke;
   font-size: xx-large;
+  display: list-item;
+  list-style-position: inside;
 }
-
 
 body {
   background: rgb(50, 64, 68);
   font-family: 'Courier New', Courier, monospace;
+  color: antiquewhite;
+  font-size: x-large;
 }

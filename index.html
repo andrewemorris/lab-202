@@ -12,7 +12,9 @@
 <body>
   <script src="app.js"></script>
   <h1>Hello
-    <script>document.write(prompt("What is your name?"));</script>
+    <script>document.write(prompt("What is your name?"));
+      numberGame();
+    </script>
   </h1>
   <h1> Who is Andrew? I don't know!</h1>
   <ul>
@@ -21,6 +23,34 @@
     <li>MBA</li>
     <li>Currently working on a start-up</li>
   </ul>
+
+  <section>
+    <h1>Top ten musicians</h1>
+    <p>Andrew's top ten musicians, in a highly subjective order</p>
+    <ol>
+      <li>Neil Young</li>
+      <li>Elvis Costello</li>
+      <li>Steely Dan</li>
+      <li>Joni Mitchell</li>
+      <li>Jean Sibeluis</li>
+      <li>Franz Lizt</li>
+      <li>Frederik Chopin</li>
+      <li>Bert Jansch</li>
+      <li>John Martyn</li>
+      <li>Stephen Stills</li>
+      <li>Nick Drake</li>
+    </ol>
+  </section>
+
+  <section>
+    <h1>Education</h1>
+    <p>Andrew's education record</p>
+    <Ul>
+      <li>Exectutive Masters of Business Adminsitration (MBA), Worcester College, Univeristy of Oxford</li>
+      <li>Batchelors of Science (BSc), Univeristy of Edinburgh</li>
+    </ul>
+  </section>
+
   <script>
     let question = "Does Andrew eat Shredded Wheat?";
     giveResponse(question, askQuestion(question), false);
