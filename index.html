@@ -12,9 +12,11 @@
 <body>
   <script src="app.js"></script>
   <h1>Hello
-    <script>document.write(prompt("What is your name?"));
-      arrayGame();
-      numberGame();
+    <script>
+      let successCount = 0;
+      document.write(prompt("What is your name?"));
+      successCount += arrayGame();
+      successCount += numberGame();
     </script>
   </h1>
   <h1> Who is Andrew? I don't know!</h1>
@@ -51,22 +53,28 @@
   </section>
 
   <script>
-
+    console.log("succesCount = " + successCount);
     let question = "Does Andrew eat Shredded Wheat?";
-    giveResponse(question, askQuestion(question), false);
+    successCount += giveResponse(question, askQuestion(question), false);
 
+    console.log("succesCount = " + successCount);
     question = "Is Andrew's favourite colour blue?";
-    giveResponse(question, askQuestion(question), true);
+    successCount += giveResponse(question, askQuestion(question), true);
 
+    console.log("succesCount = " + successCount);
     question = "Does Andrew have a cat?";
-    giveResponse(question, askQuestion(question), false);
+    successCount += giveResponse(question, askQuestion(question), false);
 
+    console.log("succesCount = " + successCount);
     question = "Does Andrew paly guitar?";
-    giveResponse(question, askQuestion(question), true);
+    successCount += giveResponse(question, askQuestion(question), true);
 
+    console.log("succesCount = " + successCount);
     question = "Is Andrew learning full stack development?";
-    giveResponse(question, askQuestion(question), true);
+    successCount += giveResponse(question, askQuestion(question), true);
 
+    console.log("succesCount = " + successCount);
+    document.write("<p>score " + successCount + " out of 7 </p>");
 
   </script>
 </body>

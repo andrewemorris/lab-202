@@ -28,14 +28,18 @@ function askQuestion(question) {
 }
 
 function giveResponse(question, answerGiven, answerExpected) {
+  let correct = false;
+
   const message = "Question '" + question + "' answer given '" + answerGiven + "' answer expected '" + answerExpected + "'";
   if (answerGiven == answerExpected) {
     //console.log(message);
+    correct = true;
     alert("Correct! " + message);
   } else {
     //console.log(message);
     alert("Incorrect! " + message);
   }
+  return (correct);
 }
 
 function numberGame() {
@@ -48,6 +52,7 @@ function numberGame() {
   const failMsg = "Sorry, you ran out of attepmts. Better luck next time!";
   const myInt = 51;
   const maxAttempts = 4;
+  let correct = false;
   let answer;
   let message = promptMsg;
 
@@ -66,6 +71,7 @@ function numberGame() {
       message = higherMsg;
     } else {
       message = successMsg;
+      correct = true;
       break;
     }
 
@@ -76,6 +82,7 @@ function numberGame() {
     }
   }
   alert(message);
+  return (correct);
 }
 
 
@@ -117,4 +124,5 @@ function arrayGame() {
 
   }
   alert(message);
+  return (correct);
 }
