@@ -73,9 +73,48 @@ function numberGame() {
       message += ". Attempt " + (i + 1) + " of " + maxAttempts + tryAgainMsg;
     } else {
       message += failMsg;
-
     }
   }
   alert(message);
 }
 
+
+function arrayGame() {
+  const promptMsg = "What is one of my favourite albums?";
+  const tryAgainMsg = "Try agian  .";
+  const correctMsg = "well done, that's one of them";
+  const failMsg = "Sorry, you ran out of attempts. Better luck next time!";
+  const albums = ["alison", "pretzel logic", "harvest", "manassas", "caught and spark", "rosemary lane"];
+  const maxAttempts = 6;
+  let message = promptMsg;
+  let correct = false;
+  let answer;
+
+  for (let i = 0; i < maxAttempts; i++) {
+    answer = prompt(message).toLowerCase();
+    console.log(answer);
+
+    console.log("attempt " + (i + 1));
+
+    for (let j = 0; j < albums.length; j++) {
+
+      correct = (albums[j] == answer);
+      if (correct) {
+        message = correctMsg;
+        console.log("correct");
+        break;
+      }
+    }
+
+    if (correct) {
+      break;
+    }
+    else if (i < maxAttempts - 1) {
+      message = tryAgainMsg + " Attempt " + (i + 1) + " of " + maxAttempts + ". " + promptMsg;
+    } else {
+      message = failMsg;
+    }
+
+  }
+  alert(message);
+}
